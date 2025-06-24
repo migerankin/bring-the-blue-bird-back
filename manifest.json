@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Bring the Blue Bird Back - X.com Icon Replacer",
+  "version": "1.0.0",
+  "description": "Replaces x.com icons with custom Twitter bird icons.",
+  "icons": {
+    "32": "icons8-twitter-bird-32.ico",
+    "128": "icons8-twitter-bird-480.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://www.x.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons8-twitter-bird-32.ico",
+        "icons8-twitter-bird-480.png",
+        "icons8-twitter-bird.svg",
+        "icons8-twitter-bird-50.png"
+      ],
+      "matches": ["https://x.com/*", "https://www.x.com/*"]
+    }
+  ]
+}
